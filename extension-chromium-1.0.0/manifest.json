@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "The Yard",
+  "version": "1.0.0",
+  "description": "Watch Disney Channel Original Movies with Yard commentary.",
+  "icons": {
+    "16": "assets/logo16.png",
+    "48": "assets/logo48.png",
+    "128": "assets/logo128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.disneyplus.com/*",
+    "*://*.patreon.com/*"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "content/import-index.js"
+      ],
+      "css": [
+        "content/index.css"
+      ],
+      "matches": [
+        "*://*.disneyplus.com/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "audio/audio.html"
+      ],
+      "matches": [
+        "*://*.disneyplus.com/*"
+      ]
+    },
+    {
+      "resources": [
+        "chunks/*-*.js",
+        "content/index.js"
+      ],
+      "matches": [
+        "*://*.disneyplus.com/*",
+        "*://*.patreon.com/*"
+      ]
+    }
+  ]
+}
