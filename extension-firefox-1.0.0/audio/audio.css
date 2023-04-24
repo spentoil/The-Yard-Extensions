@@ -1,0 +1,23 @@
+body {
+	display: flex;
+	justify-content: center;
+	opacity: 0.3;
+}
+
+body:hover {
+	opacity: 1;
+}
+
+.logo {
+	width: 40px;
+	height: 40px;
+}
+
+.debug {
+	font-family: sans-serif;
+	color: white;
+}
+
+.slider {
+	cursor: pointer;
+}
